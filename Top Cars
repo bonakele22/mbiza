@@ -1,0 +1,77 @@
+package ocp3;
+import java.util.Collections; 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+
+/**
+ *
+ * @author Banetsi Zimbabwe
+ */
+public class OCP3 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+          int[] topCars1 = new int[2]; 
+        int[] topCars2 = new int[2]; 
+        topCars1[0] = 1; 
+        topCars2[1] = 2; 
+        System.out.println(topCars1[0]);
+        System.out.println(topCars2[1]);
+        
+          Integer[]topCars = { 13, 7, 6, 45, 21, 9, 2, 100 }; 
+  
+        // Sorts arr[] in descending order 
+        Arrays.sort(topCars, Collections.reverseOrder()); 
+  
+        System.out.printf("Modified arr[] : %s", 
+                          Arrays.toString(topCars)); 
+     
+        
+        List<String> topCarsSA = new ArrayList<>();
+        
+        topCarsSA.add("PORSCHE 911 TURBO S");
+        topCarsSA.add("NISSAN GT-R");
+        topCarsSA.add("MERCEDES-BENZ AMG GT R");
+        topCarsSA.add("AUDI R8 COUPE 5.2 FSI V10 PLUS QUATTRO S TRONIC");
+        topCarsSA.add("MERCEDES-BENZ SL65 AMG");
+        topCarsSA.add("JAGUAR XKR-S COUPE AND CONVERTIBLE");
+        System.out.println("\n\nHere are the top ".toUpperCase()
+                + topCarsSA.size() + " cars in South Africa".toUpperCase());
+  
+        
+        for(int index = 0; index < topCarsSA.size(); index++)
+        {
+            System.out.println(topCarsSA.get(index));
+        }
+        System.out.println();
+
+
+       
+        String bestSeller =topCarsSA .get(0);
+        String secondBestSeller = topCarsSA.get(1);
+        String lastCar = topCarsSA.get(topCarsSA.size() - 1);
+        
+        System.out.println("Best Car: " + bestSeller);
+        System.out.println("Second Best Car: " + secondBestSeller);
+        System.out.println("Last Car in the list: " + lastCar);
+        
+        topCarsSA.set(5, "Walmart");
+        System.out.println("Modified top Cars list: " + topCarsSA);
+        
+        
+        
+
+        
+
+        
+    }
+    
+}
+
+    
+    
+
